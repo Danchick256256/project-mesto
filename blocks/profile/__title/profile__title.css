@@ -6,12 +6,15 @@
     color: #FFFFFF;
     padding-left: 30px;
     margin: 0 auto;
-    max-height: 48px;
+    max-width: 294px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 720px) {
     .profile__title {
+        max-width: 189px;
         padding: 0;
         margin: 0;
         font-size: 27px;
