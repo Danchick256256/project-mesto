@@ -22,80 +22,86 @@
         </div>
         <button type="button" class="profile__add-button"></button>
     </section>
-    <section class="elements">
-        <article class="card">
-            <img src="./images/karachaevsk.png" alt="Карачаевск" class="card__image">
-            <div class="card__container">
-                <h2 class="card__title">Карачаевск</h2>
-                <button type="button" class="card__button-like"></button>
-            </div>
-        </article>
-        <article class="card">
-            <img src="./images/elbrus.png" alt="Эльбрус" class="card__image">
-            <div class="card__container">
-                <h2 class="card__title">Гора Эльбрус</h2>
-                <button type="button" class="card__button-like"></button>
-            </div>
-        </article>
-        <article class="card">
-            <img src="./images/dombai.png" alt="Домбай" class="card__image">
-            <div class="card__container">
-                <h2 class="card__title">Домбай</h2>
-                <button type="button" class="card__button-like"></button>
-            </div>
-        </article>
-        <article class="card">
-            <img src="./images/elbrus.png" alt="Эльбрус" class="card__image">
-            <div class="card__container">
-                <h2 class="card__title">Гора Эльбрус</h2>
-                <button type="button" class="card__button-like"></button>
-            </div>
-        </article>
-        <article class="card">
-            <img src="./images/dombai.png" alt="Домбай" class="card__image">
-            <div class="card__container">
-                <h2 class="card__title">Домбай</h2>
-                <button type="button" class="card__button-like"></button>
-            </div>
-        </article>
-        <article class="card">
-            <img src="./images/karachaevsk.png" alt="Карачаевск" class="card__image">
-            <div class="card__container">
-                <h2 class="card__title">Карачаево-Ч...</h2>
-                <button type="button" class="card__button-like"></button>
-            </div>
-        </article>
+    <section class="elements"></section>
 
-    </section>
-
-    <div class="popup">
+    <div class="popup" id="editPopup">
         <div class="popup__container">
             <button class="popup__button-close" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form action="#" name="info-form">
+            <form action="#" name="info-form" id="editForm">
                 <fieldset class="popup__info">
-                    <input
-                            class="popup__item"
-                            type="text"
-                            name="username"
-                            value=""
-                            placeholder="Жак-Ив Кусто"
+                    <input required
+                           class="popup__item"
+                           type="text"
+                           name="username"
+                           value="Жак-Ив Кусто"
+                           placeholder="Жак-Ив Кусто"
                     />
-                    <input
-                            class="popup__item"
-                            type="text"
-                            name="job"
-                            value=""
-                            placeholder="Исследователь океана"
+                    <input required
+                           class="popup__item"
+                           type="text"
+                           name="job"
+                           value="Исследователь океана"
+                           placeholder="Исследователь океана"
                     />
                 </fieldset>
                 <button class="popup__button-submit" type="submit">Сохранить</button>
             </form>
         </div>
     </div>
+
+    <div class="popup" id="newPlacePopup">
+        <div class="popup__container">
+            <button class="popup__button-close" type="button"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form action="#" name="info-form" id="newPlaceForm">
+                <fieldset class="popup__info">
+                    <input required
+                           class="popup__item"
+                           type="text"
+                           name="name"
+                           value=""
+                           placeholder="Название"
+                    />
+                    <input required
+                           class="popup__item"
+                           type="url"
+                           name="link"
+                           value=""
+                           placeholder="Ссылка на картинку"
+                    />
+                </fieldset>
+                <button class="popup__button-submit" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup" id="imagePopup">
+        <div class="popup__image-box">
+            <button class="popup__button-close" type="button"></button>
+            <div class="popup__image-box">
+                <img src="" class="popup__image" alt="картинка">
+                <p class="popup__image-caption">Название</p>
+            </div>
+        </div>
+    </div>
 </main>
 <footer class="footer">
     <p class="footer__copyright">&COPY; Даниил</p>
 </footer>
+<article class="card">
+
+</article>
+<template class="card__template">
+    <article class="card">
+        <button class="card__button-delete"></button>
+        <img src="" alt="Карточка" class="card__image"/>
+        <div class="card__container">
+            <h2 class="card__title"></h2>
+            <button type="button" class="card__button-like"></button>
+        </div>
+    </article>
+</template>
+<script defer="defer" type="module" src="scripts/index.js"></script>
 </body>
 </html>

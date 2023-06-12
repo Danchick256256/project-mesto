@@ -6,13 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="c9886f0e-59c1-4510-bd5f-3db4293fb474" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__button-like/card__button-like.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/card/__button-like/card__button-like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/__image/card__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/card/__image/card__image.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/card/__title/card__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/card/__title/card__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/card/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__button-close/popup__button-close.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__button-close/popup__button-close.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__button-submit/popup__button-submit.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__button-submit/popup__button-submit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__item/popup__item.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__item/popup__item.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__opened/popup__opened.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__container/profile__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__container/profile__container.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/profile/__subtitle/profile__subtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__subtitle/profile__subtitle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__title/profile__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__title/profile__title.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -37,21 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/wdffcz/WebstormProjects/mesto&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/jjjuk/WebstormProjects/WebstormProjects/mesto/blocks/card",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jjjuk\WebstormProjects\WebstormProjects\mesto\blocks\card" />
+      <recent name="C:\Users\wdffcz\WebstormProjects\mesto\blocks\card\__button-like\_active" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\wdffcz\WebstormProjects\mesto\blocks\profile" />
       <recent name="C:\Users\wdffcz\WebstormProjects\mesto\blocks\profile\__subtitle" />
@@ -77,6 +90,18 @@
       <workItem from="1678730721114" duration="6446000" />
       <workItem from="1678801963453" duration="1291000" />
       <workItem from="1678827732780" duration="879000" />
+      <workItem from="1678877149573" duration="1280000" />
+      <workItem from="1678909162012" duration="1390000" />
+      <workItem from="1678980563499" duration="755000" />
+      <workItem from="1679042744945" duration="682000" />
+      <workItem from="1679081067154" duration="85000" />
+      <workItem from="1679179094411" duration="38000" />
+      <workItem from="1680626721249" duration="163000" />
+      <workItem from="1680626902243" duration="103000" />
+      <workItem from="1682170863023" duration="2843000" />
+      <workItem from="1686404988538" duration="4611000" />
+      <workItem from="1686483948945" duration="8568000" />
+      <workItem from="1686553084118" duration="8000000" />
     </task>
     <servers />
   </component>

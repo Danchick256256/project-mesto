@@ -16,9 +16,8 @@
         max-width: 282px;
         font-size: 14px;
         line-height: 17px;
-        display: flex;
-        justify-content: center;
-        margin: 14px 0 0 0;
+        margin: 9px auto auto auto;
         padding: 0;
+        text-align: center;
     }
 }
