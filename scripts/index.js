@@ -7,40 +7,32 @@ const addButton = document.querySelector('.profile__add-button');
 
 const cardsSection = document.querySelector('.elements');
 
-const closeButtons = document.getElementsByClassName('popup__button-close');
-const popups = document.getElementsByClassName('popup');
+const closeButtons = document.querySelectorAll('.popup__button-close');
+const popups = document.querySelectorAll('.popup');
 
-const image = document.querySelector('.popup__image');
-const caption = document.querySelector('.popup__image-caption');
+const popupImage = document.querySelector('.popup__image');
+const popupCaption = document.querySelector('.popup__image-caption');
 
 const imagePopup = document.querySelector('#imagePopup');
 const editPopup = document.querySelector('#editPopup');
 const newPlacePopup = document.querySelector('#newPlacePopup');
 
-const title = document.querySelector('.profile__title');
-const subtitle = document.querySelector('.profile__subtitle');
+const profileTitle = document.querySelector('.profile__title');
+const profileSubtitle = document.querySelector('.profile__subtitle');
 
 const editFormElement = document.querySelector("#editForm");
 const nameInput = editFormElement.querySelector('input[name="username"]');
 const jobInput = editFormElement.querySelector('input[name="job"]');
 
-const newPlaceElement = document.querySelector("#newPlaceForm");
-const newPlaceNameInput = newPlaceElement.querySelector('input[name="name"]');
-const newPlaceLinkInput = newPlaceElement.querySelector('input[name="link"]');
+const newPlaceFormElement = document.querySelector("#newPlaceForm");
+const newPlaceNameInput = newPlaceFormElement.querySelector('input[name="name"]');
+const newPlaceLinkInput = newPlaceFormElement.querySelector('input[name="link"]');
 
 function addListenersToCards() {
     console.log(`{adding.listeners.to.new.cards}`);
-    const deleteButtons = document.getElementsByClassName("card__button-delete");
-    for (const deleteButton of deleteButtons) {
-        deleteButton.addEventListener('click', handleDeleteClick);
-    }
-    const cards = document.getElementsByClassName("card__image");
+    const cards = document.querySelectorAll(".card__image");
     for (const card of cards) {
         card.addEventListener('click', handleImageClick);
-    }
-    const likeButtons = document.getElementsByClassName("card__button-like");
-    for (const likeButton of likeButtons) {
-        likeButton.addEventListener('click', handleLikeClick);
     }
 }
 
@@ -86,8 +78,8 @@ const addInitialCard = () => {
         const card = new Card(initialCard.link, initialCard.name, '.card__template').createCard();
         console.log(`{adding.initial.cards{${initialCard.link}, ${initialCard.name}}`);
         cardsSection.prepend(card);
+        card.querySelector(".card__image").addEventListener('click', handleImageClick);
     }
-    addListenersToCards();
 };
 
 addInitialCard();
@@ -95,10 +87,10 @@ addInitialCard();
 function handleEditFormSubmit(evt) {
     console.log(`{submit.edit.form}`);
     evt.preventDefault();
-    nameInput.setAttribute("value", nameInput.value);
-    jobInput.setAttribute("value", jobInput.value);
-    title.innerText = nameInput.value;
-    subtitle.innerText = jobInput.value;
+    nameInput.textContent = nameInput.value;
+    jobInput.textContent = jobInput.value;
+    profileTitle.innerText = nameInput.value;
+    profileSubtitle.innerText = jobInput.value;
     closePopup(editPopup);
 }
 
@@ -112,23 +104,12 @@ function handleNewPlaceFormSubmit(evt) {
 }
 
 function handleImageClick(evt) {
-    const imageCaption = evt.target.nextElementSibling.getElementsByClassName("card__title")[0].innerHTML;
+    const imageCaption = evt.target.nextElementSibling.querySelectorAll(".card__title")[0].innerHTML;
     console.log(`{click.on.image{caption: ${imageCaption}}`);
-    image.setAttribute("src", evt.target.getAttribute("src"));
-    caption.innerHTML = imageCaption;
+    popupImage.src = evt.target.src;
+    popupCaption.innerHTML = imageCaption;
     openPopup(imagePopup);
 }
 
-function handleLikeClick(evt) {
-    console.log(`{handled.like.click}`);
-    evt.target.classList.toggle("card__button-like_active_true");
-}
-
-function handleDeleteClick(evt) {
-    console.log(`{handled.remove.click}`);
-    evt.target.parentNode.classList.add("card__remove");
-    setTimeout(() => evt.target.parentNode.remove(), 350);
-}
-
 editFormElement.addEventListener('submit', handleEditFormSubmit);
-newPlaceElement.addEventListener('submit', handleNewPlaceFormSubmit);
+newPlaceFormElement.addEventListener('submit', handleNewPlaceFormSubmit);

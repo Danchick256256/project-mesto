@@ -20,7 +20,15 @@ class Card {
 
         this.likeButton = cardElement.querySelector('.card__button-like');
         this.likeButton.addEventListener('click', () => {
-            this.likeButton.classList.toggle('.card__button-like_active_true')
+            console.log(`{handled.like.click}`);
+            this.likeButton.classList.toggle('card__button-like_active_true')
+        });
+
+        this.deleteButton = cardElement.querySelector('.card__button-delete');
+        this.deleteButton.addEventListener('click', () => {
+            console.log(`{handled.delete.click}`);
+            this.deleteButton.parentNode.classList.add("card__remove");
+            setTimeout(() => this.deleteButton.closest(), 350);
         });
 
         return cardElement;
