@@ -28,7 +28,7 @@ class Card {
         this.deleteButton.addEventListener('click', () => {
             console.log(`{handled.delete.click}`);
             this.deleteButton.parentNode.classList.add("card__remove");
-            setTimeout(() => this.deleteButton.closest(), 350);
+            setTimeout(() => this.deleteButton.parentNode.remove(), 350); /* Как мне избавиться от parentNode? closest() не удаляет его */
         });
 
         return cardElement;

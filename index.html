@@ -25,7 +25,7 @@
     <section class="elements"></section>
 
     <div class="popup" id="editPopup">
-        <div class="popup__container">
+        <div class="popup__text-container">
             <button class="popup__button-close" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form action="#" name="info-form" id="editForm">
@@ -34,14 +34,14 @@
                            class="popup__item"
                            type="text"
                            name="username"
-                           value="Жак-Ив Кусто"
+                           value=""
                            placeholder="Жак-Ив Кусто"
                     />
                     <input required
                            class="popup__item"
                            type="text"
                            name="job"
-                           value="Исследователь океана"
+                           value=""
                            placeholder="Исследователь океана"
                     />
                 </fieldset>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="popup" id="newPlacePopup">
-        <div class="popup__container">
+        <div class="popup__text-container">
             <button class="popup__button-close" type="button"></button>
             <h2 class="popup__title">Новое место</h2>
             <form action="#" name="info-form" id="newPlaceForm">
@@ -77,9 +77,9 @@
     </div>
 
     <div class="popup" id="imagePopup">
-        <div class="popup__image-box">
+        <div class="popup__image-container"> <!-- это другой контейнер который должен быть без отступов и не флекс -->
             <button class="popup__button-close" type="button"></button>
-            <div class="popup__image-box">
+            <div class="popup__image-container">
                 <img src="" class="popup__image" alt="картинка">
                 <p class="popup__image-caption">Название</p>
             </div>
