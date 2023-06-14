@@ -28,14 +28,6 @@ const newPlaceFormElement = document.querySelector("#newPlaceForm");
 const newPlaceNameInput = newPlaceFormElement.querySelector('input[name="name"]');
 const newPlaceLinkInput = newPlaceFormElement.querySelector('input[name="link"]');
 
-function addListenersToCards() {
-    console.log(`{adding.listeners.to.new.cards}`);
-    const cards = document.querySelectorAll(".card__image");
-    for (const card of cards) {
-        card.addEventListener('click', handleImageClick);
-    }
-}
-
 document.addEventListener('keydown', (event) => {
     if (event.code === "Escape") {
         console.log(`{escape.pressed}`);
@@ -78,7 +70,6 @@ const addInitialCard = () => {
         const card = new Card(initialCard.link, initialCard.name, '.card__template').createCard();
         console.log(`{adding.initial.cards{${initialCard.link}, ${initialCard.name}}`);
         cardsSection.prepend(card);
-        card.querySelector(".card__image").addEventListener('click', handleImageClick);
     }
 };
 
@@ -98,17 +89,10 @@ function handleNewPlaceFormSubmit(evt) {
     console.log(`{submit.newPlace.form}`);
     evt.preventDefault();
     const card = new Card(newPlaceLinkInput.value, newPlaceNameInput.value, '.card__template').createCard();
+    newPlaceLinkInput.value = "";
+    newPlaceNameInput.value = "";
     cardsSection.prepend(card);
-    addListenersToCards();
     closePopup(newPlacePopup);
-}
-
-function handleImageClick(evt) {
-    const imageCaption = evt.target.nextElementSibling.querySelectorAll(".card__title")[0].innerHTML;
-    console.log(`{click.on.image{caption: ${imageCaption}}`);
-    popupImage.src = evt.target.src;
-    popupCaption.innerHTML = imageCaption;
-    openPopup(imagePopup);
 }
 
 editFormElement.addEventListener('submit', handleEditFormSubmit);

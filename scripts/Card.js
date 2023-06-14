@@ -6,6 +6,10 @@ class Card {
     }
 
     createCard() {
+        const imagePopup = document.querySelector('#imagePopup');
+        const popupImage = document.querySelector('.popup__image');
+        const popupCaption = document.querySelector('.popup__image-caption');
+
         const cardElement = document
             .querySelector(this.template)
             .content.querySelector('.card')
@@ -28,7 +32,15 @@ class Card {
         this.deleteButton.addEventListener('click', () => {
             console.log(`{handled.delete.click}`);
             this.deleteButton.parentNode.classList.add("card__remove");
-            setTimeout(() => this.deleteButton.parentNode.remove(), 350); /* Как мне избавиться от parentNode? closest() не удаляет его */
+            setTimeout(() => cardElement.remove(), 350);
+        });
+
+        this.cardImage.addEventListener('click', () => {
+            console.log(`{click.on.image{caption: ${this.cardTitle}}`);
+            console.log();
+            popupImage.src = this.cardImage.src;
+            popupCaption.innerHTML = this.cardTitle.textContent;
+            imagePopup.classList.add('popup_opened');
         });
 
         return cardElement;
