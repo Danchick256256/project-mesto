@@ -1,5 +1,6 @@
 import initialCards from './cards.js';
 import Card from './Card.js';
+import {openPopup} from "./Card.js";
 
 const editButton = document.querySelector('.profile__edit-button');
 
@@ -10,10 +11,6 @@ const cardsSection = document.querySelector('.elements');
 const closeButtons = document.querySelectorAll('.popup__button-close');
 const popups = document.querySelectorAll('.popup');
 
-const popupImage = document.querySelector('.popup__image');
-const popupCaption = document.querySelector('.popup__image-caption');
-
-const imagePopup = document.querySelector('#imagePopup');
 const editPopup = document.querySelector('#editPopup');
 const newPlacePopup = document.querySelector('#newPlacePopup');
 
@@ -60,11 +57,6 @@ const closePopup = (popup) => {
     popup.classList.remove('popup_opened');
 };
 
-const openPopup = (popup) => {
-    console.log(`{open.popup{${popup}}`);
-    popup.classList.add('popup_opened');
-};
-
 const addInitialCard = () => {
     for (const initialCard of initialCards) {
         const card = new Card(initialCard.link, initialCard.name, '.card__template').createCard();
@@ -97,3 +89,5 @@ function handleNewPlaceFormSubmit(evt) {
 
 editFormElement.addEventListener('submit', handleEditFormSubmit);
 newPlaceFormElement.addEventListener('submit', handleNewPlaceFormSubmit);
+
+export default openPopup;

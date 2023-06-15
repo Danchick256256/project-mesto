@@ -37,10 +37,9 @@ class Card {
 
         this.cardImage.addEventListener('click', () => {
             console.log(`{click.on.image{caption: ${this.cardTitle}}`);
-            console.log();
             popupImage.src = this.cardImage.src;
             popupCaption.innerHTML = this.cardTitle.textContent;
-            imagePopup.classList.add('popup_opened');
+            openPopup(imagePopup);
         });
 
         return cardElement;
@@ -48,3 +47,7 @@ class Card {
 }
 
 export default Card;
+export function openPopup(popup) {
+    console.log(`{open.popup{${popup}}`);
+    popup.classList.add('popup_opened');
+}
